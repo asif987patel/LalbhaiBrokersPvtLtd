@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashboard"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--    layout containing background image, title, logo, profile button-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+    <!--            dashboard background image-->
+    <ImageView
+        android:id="@+id/dashboard_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/dashboard_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_trade"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!--            background image black tint view-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/darken" />
+
+        <!--            profile image button-->
+<!--        <ImageView-->
+<!--            android:id="@+id/user_profile_imageView"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignEnd="@id/dashboard_background_image"-->
+<!--            android:layout_alignTop="@id/dashboard_background_image"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:onClick="userProfileMethod"-->
+<!--            android:src="@drawable/ic_user_white" />-->
+
+        <!--            user dashboard title text-->
+        <TextView
+            android:id="@+id/dashboard_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/cardView"
+            android:layout_alignTop="@id/cardView"
+            android:layout_marginStart="95dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="@string/app_name_title_view"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <!--            cardview for border of logo image-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="100dp"
+            app:cardBackgroundColor="@color/darkBlue"
+            app:cardCornerRadius="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--                cardview to make logo image circular-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="250dp">
+
+                <!--                    logo image-->
+                <ImageView
+                    android:id="@+id/dashboardLogoImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_logo_lalbhai" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+<!--    layout containing daily and quarterly cards-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+<!--        helper view, to align elements-->
+        <View
+            android:id="@+id/helper_view_1"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+
+        <!--            daily bill card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp"
+            android:layout_alignEnd="@id/helper_view_1">
+
+            <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/daily_bill_cardView"
+            android:layout_margin="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:onClick="dailyBillMethod">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+<!--                daily card image-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_daily"
+                    android:contentDescription="@string/todays_bill"/>
+
+<!--                daily card text-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/todays_bill_multiline"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/architects_daughter"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--            quarterly invoice card-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignStart="@id/helper_view_1"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quarterly_invoice_cardView"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:onClick="quarterlyInvoiceMethod">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <!--                quarterly card image-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_quarterly"
+                        android:contentDescription="@string/quarterly_invoice"/>
+
+                    <!--                quarterly card text-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quarterly_invoice_multiline"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/architects_daughter"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

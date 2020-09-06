@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lalbhai Brokers Pvt. Ltd.</string>
+    <string name="slogan">Trusted since 2020</string>
+    <string name="powered_by">Powered by Webisean</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Your Profile</string>
+    <string name="enter_mobile_no">Enter mobile number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_info_provided">"*Please enter required information"</string>
+    <string name="todays_bill">Today\'s Bill</string>
+    <string name="quarterly_invoice">Quarterly Invoice</string>
+    <string name="app_name_title_view">Lalbhai Brokers\nPvt. Ltd.</string>
+    <string name="welcome_aboard">Hello there,\nWelcome aboard</string>
+    <string name="login_message">Login to continue</string>
+    <string name="dashboard_image">dashboard title background image</string>
+    <string name="todays_bill_multiline">Today\'s\nBill</string>
+    <string name="quarterly_invoice_multiline">Quarterly\nInvoice</string>
+</resources>

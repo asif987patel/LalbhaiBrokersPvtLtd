@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lalbhaibrokers.lalbhaibrokerspvtltd">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_lalbhai"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_lalbhai_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+<!--        profile and settings activity-->
+        <activity android:name=".ProfileAndSettings"
+            android:screenOrientation="portrait"/>
+
+<!--        quarterly invoice activity-->
+        <activity android:name=".QuarterlyInvoice"
+            android:screenOrientation="portrait"/>
+
+<!--        daily bill activity-->
+        <activity android:name=".DailyBill"
+            android:screenOrientation="portrait"/>
+
+<!--        dashboard activity-->
+        <activity
+            android:name=".UserDashboard"
+            android:screenOrientation="portrait" />
+
+<!--        login activity-->
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+
+<!--        splash screen activity-->
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
