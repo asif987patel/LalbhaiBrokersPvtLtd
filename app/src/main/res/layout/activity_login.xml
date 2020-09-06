@@ -132,6 +132,30 @@
             android:onClick="loginMethod"
             android:text="@string/login"
             android:textColor="@color/black" />
+        <!--        Send otp Button-->
+        <Button
+            android:id="@+id/send_otp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/dim_light_blue"
+            android:fontFamily="@font/abril_fatface"
+            android:onClick="sendOtp"
+            android:text="Send Otp"
+            android:textColor="@color/black" />
+
+        <!--        verify otp Button initialy not visible-->
+        <Button
+            android:id="@+id/verify_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="@color/dim_light_blue"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Verify Otp"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
 
 <!--        layout for error message-->
         <RelativeLayout
